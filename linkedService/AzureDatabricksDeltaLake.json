@@ -1,0 +1,12 @@
+{
+	"name": "AzureDatabricksDeltaLake",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLake",
+		"typeProperties": {
+			"domain": "https://adb-1465055186342152.12.azuredatabricks.net",
+			"clusterId": "0429-212946-3bmjj7dm",
+			"workspaceResourceId": "/subscriptions/6a180b86-463f-4107-af91-b7105f2fcc4f/resourceGroups/rg-demo-kmpp/providers/Microsoft.Databricks/workspaces/adbeastdemo02"
+		}
+	}
+}
