@@ -5,11 +5,34 @@
 			"referenceName": "AzureDataLakeStorage",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"prm_container": {
+				"type": "string"
+			},
+			"prm_directory": {
+				"type": "string"
+			},
+			"prm_filename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().prm_filename",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().prm_directory",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().prm_container",
+					"type": "Expression"
+				}
 			},
 			"compressionCodec": "snappy"
 		},

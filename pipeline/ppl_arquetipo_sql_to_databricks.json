@@ -32,7 +32,14 @@
 			{
 				"name": "ForEach",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Lookup",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"activities": [
@@ -86,7 +93,17 @@
 							"outputs": [
 								{
 									"referenceName": "dset_write_parquet",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"prm_container": {
+											"value": "@pipeline().globalParameters.prm_global_container",
+											"type": "Expression"
+										},
+										"prm_directory": {
+											"value": "@concat(\n    '/landing/',\n    item().path_landing,\n    '/',\n    formatDateTime(utcNow(),'yyyy-MM-dd')\n)",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
