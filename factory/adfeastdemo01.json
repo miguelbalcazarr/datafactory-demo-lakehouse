@@ -1,5 +1,13 @@
 {
 	"name": "adfeastdemo01",
+	"properties": {
+		"globalParameters": {
+			"prm_global_container": {
+				"type": "string",
+				"value": "metastore"
+			}
+		}
+	},
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
