@@ -11,9 +11,6 @@
 			},
 			"prm_directory": {
 				"type": "string"
-			},
-			"prm_filename": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
