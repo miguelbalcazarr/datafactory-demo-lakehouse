@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureDatabricksDeltaLakeSource",
 						"query": {
-							"value": "@concat(\n    'SELECT * FROM auditoria.parametros WHERE proceso = ',\n    '''',\n    pipeline().parameters.prm_adb_proceso,\n    ''''\n)",
+							"value": "@concat(\n    'SELECT * FROM kyndryl.auditoria.parametros WHERE proceso = ',\n    '''',\n    pipeline().parameters.prm_adb_proceso,\n    ''''\n)",
 							"type": "Expression"
 						}
 					},
