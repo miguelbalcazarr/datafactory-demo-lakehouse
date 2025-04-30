@@ -1,0 +1,43 @@
+{
+	"name": "ppl_arquetipo_sql_to_databricks",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureDatabricksDeltaLakeSource",
+						"query": {
+							"value": "@concat(\n    'SELECT * FROM auditoria.parametros WHERE proceso = ',\n    '''',\n    pipeline().parameters.prm_adb_proceso,\n    ''''\n)",
+							"type": "Expression"
+						}
+					},
+					"dataset": {
+						"referenceName": "dset_read_adb",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			}
+		],
+		"parameters": {
+			"prm_adb_proceso": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "Arquetipos"
+		},
+		"annotations": []
+	}
+}
