@@ -1,5 +1,5 @@
 {
-	"name": "ppl_arquetipo_sql_to_databricks",
+	"name": "ppl_arquetipo_sql_to_landing",
 	"properties": {
 		"activities": [
 			{

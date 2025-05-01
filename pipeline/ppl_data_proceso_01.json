@@ -1,0 +1,30 @@
+{
+	"name": "ppl_data_proceso_01",
+	"properties": {
+		"activities": [
+			{
+				"name": "sql_to_landing",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ppl_arquetipo_sql_to_landing",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"prm_adb_proceso": "proceso_01"
+					}
+				}
+			}
+		],
+		"folder": {
+			"name": "mallas"
+		},
+		"annotations": []
+	}
+}
