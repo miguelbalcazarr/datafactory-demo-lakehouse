@@ -4,12 +4,12 @@
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"server": "srvbdsqledicion7.database.windows.net ",
-			"database": "tallersqldeedicion7",
+			"server": "sqleastdemo01.database.windows.net ",
+			"database": "demo",
 			"encrypt": "mandatory",
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
-			"userName": "usrbdadminedicion7",
+			"userName": "miguelbalcazar",
 			"password": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
