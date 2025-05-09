@@ -1,5 +1,5 @@
 {
-	"name": "ppl_data_proceso_production",
+	"name": "ppl_data_proceso_sales",
 	"properties": {
 		"activities": [
 			{
@@ -28,7 +28,7 @@
 		"parameters": {
 			"prm_proceso": {
 				"type": "string",
-				"defaultValue": "proceso_production"
+				"defaultValue": "proceso_sales"
 			}
 		},
 		"folder": {
