@@ -1,5 +1,5 @@
 {
-	"name": "ppl_data_proceso_01",
+	"name": "ppl_data_proceso_production",
 	"properties": {
 		"activities": [
 			{
@@ -17,11 +17,20 @@
 					},
 					"waitOnCompletion": true,
 					"parameters": {
-						"prm_adb_proceso": "proceso_01"
+						"prm_adb_proceso": {
+							"value": "@pipeline().parameters.prm_proceso",
+							"type": "Expression"
+						}
 					}
 				}
 			}
 		],
+		"parameters": {
+			"prm_proceso": {
+				"type": "string",
+				"defaultValue": "proceso_production"
+			}
+		},
 		"folder": {
 			"name": "mallas"
 		},
